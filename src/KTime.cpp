@@ -51,7 +51,8 @@ void KTime::updateTime()
 {
 	time_t currentTime = time( NULL );
 	struct tm* timeLocal = new tm;
-	localtime_s( timeLocal, &currentTime );
+	//	localtime_t( timeLocal, &currentTime );
+	localtime_r(&currentTime, timeLocal);
 	
 	_year = timeLocal->tm_year + 1900;
 	_month = timeLocal->tm_mon + 1;
