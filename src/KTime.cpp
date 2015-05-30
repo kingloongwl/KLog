@@ -50,9 +50,12 @@ void KTime::release()
 void KTime::updateTime()
 {
 	time_t currentTime = time( NULL );
-	struct tm* timeLocal = new tm;
-	//	localtime_t( timeLocal, &currentTime );
-	localtime_r(&currentTime, timeLocal);
+
+//	struct tm* timeLocal = new tm;
+//	localtime_t( timeLocal, &currentTime );	//windows
+// 	localtime_r(&currentTime, timeLocal);	//linux
+
+	struct tm* timeLocal = localtime( &currentTime );	//windows & linux
 	
 	_year = timeLocal->tm_year + 1900;
 	_month = timeLocal->tm_mon + 1;
@@ -65,7 +68,7 @@ void KTime::updateTime()
 	_wday = timeLocal->tm_wday;
 	
 	
-	delete timeLocal;
+// 	delete timeLocal;
 }
 
 std::string KTime::getDate( const std::string &sep )
