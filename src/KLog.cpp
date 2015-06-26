@@ -1,4 +1,4 @@
-
+ï»¿
 #include "KLog.h"
 #include "KTime.h"
 
@@ -50,17 +50,17 @@ void KLog::writeLog( const std::string &logStr, LogLevel logLevel )
 		return;
 	}
 
-	std::string flagStr = "ĞÅÏ¢";
+	std::string flagStr = "ä¿¡æ¯";
 	switch ( logLevel )
 	{
 	case INFO:
-		flagStr = "ĞÅÏ¢";
+		flagStr = "ä¿¡æ¯";
 		break;
 	case WARNING:
-		flagStr = "¾¯¸æ";
+		flagStr = "è­¦å‘Š";
 		break;
 	case ERROR:
-		flagStr = "´íÎó";
+		flagStr = "é”™è¯¯";
 		break;
 	default: 
 		break;

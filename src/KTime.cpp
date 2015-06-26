@@ -1,4 +1,4 @@
-
+﻿
 #include "KTime.h"
 
 #include <time.h>

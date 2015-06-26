@@ -1,4 +1,4 @@
-
+﻿
 #ifndef KLOG_KLOG_H_
 #define KLOG_KLOG_H_
 

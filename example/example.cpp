@@ -1,12 +1,12 @@
-
+ï»¿
 #include "KLog.h"
 
 
 int main()
 {
-	KLog::getInstance()->writeLog( "µÚÒ»ÌõĞÅÏ¢" );
-	KLog::getInstance()->writeLog( "µÚÒ»Ìõ¾¯¸æ", KLog::WARNING );
-	KLog::getInstance()->writeLog( "µÚÒ»Ìõ´íÎó", KLog::ERROR );
+	KLog::getInstance()->writeLog( "ç¬¬ä¸€æ¡ä¿¡æ¯" );
+	KLog::getInstance()->writeLog( "ç¬¬ä¸€æ¡è­¦å‘Š", KLog::WARNING );
+	KLog::getInstance()->writeLog( "ç¬¬ä¸€æ¡é”™è¯¯", KLog::ERROR );
 
 	KLog::release();
 	return 0;
